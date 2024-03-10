@@ -13,9 +13,6 @@ window= tk.Tk()
 window.title("Siemens LOGO! Offset/Gain calculator")
 window.geometry('900x500')
 
-imageMATH = Image.open('siemens_logo_icon_170741.png')
-ico = ImageTk.PhotoImage(imageMATH)
-window.wm_iconphoto(False,ico)
 
 #creates the onescreen text
 LabelLowValueI = Label(window,text='Input Low Value(0.00-10.00V):',fg='blue',font=('Arial',14))
