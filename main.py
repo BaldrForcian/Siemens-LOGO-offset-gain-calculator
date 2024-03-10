@@ -6,18 +6,22 @@ from tkinter import DoubleVar
 
 from PIL import ImageTk, Image
 
-#imageMATH= Image.open("")
+
 
 #initlialization of window
 window= tk.Tk()
 window.title("Siemens LOGO! Offset/Gain calculator")
-window.geometry('1000x500')
+window.geometry('900x500')
+
+imageMATH = Image.open('siemens_logo_icon_170741.png')
+ico = ImageTk.PhotoImage(imageMATH)
+window.wm_iconphoto(False,ico)
 
 #creates the onescreen text
-LabelLowValueI = Label(window,text='Input Low Value(0-10V):',fg='blue',font=('Arial',14))
+LabelLowValueI = Label(window,text='Input Low Value(0.00-10.00V):',fg='blue',font=('Arial',14))
 LabelLowValueI.grid(row=0,column=0,padx=20,pady=5,sticky='W')
 
-LabelHighValueI = Label(window,text='Input High Value(0-10V):',fg='blue',font=('Arial',14))
+LabelHighValueI = Label(window,text='Input High Value(0.00-10.00V):',fg='blue',font=('Arial',14))
 LabelHighValueI.grid(row=1,column=0,padx=20,pady=5,sticky='W')
 
 LabelLowValueO = Label(window,text='Output Value by Low Value of Input:',fg='blue',font=('Arial',14))
@@ -51,6 +55,11 @@ def Calculate():
     
     Gainbox.delete(0,'end')
     OffsetBox.delete(0,'end')
+    V1Textbox.delete(0,'end')
+    V2Textbox.delete(0,'end')
+    V3Textbox.delete(0,'end')
+    V4Textbox.delete(0,'end')
+
     
     Var1=XA.get()
     Var2=XB.get()
@@ -78,24 +87,22 @@ def Calculate():
     V4Textbox.insert(0,str(V4))
 
 
-
-   
 #creates the button for calculate
 ButtonCalc = Button(window,text='Calculate',command=Calculate,fg='blue',font=('Arial',14))
 ButtonCalc.grid(row=4,column=1,padx=20,pady=5)
 
 #creates the textboxes for gain and offset
-Gainbox = Entry(window,fg='blue',font=('Arial',14))
+Gainbox = Entry(window,width=20,fg='blue',font=('Arial',14))
 Gainbox.grid(row=5,column=1,padx=20,pady=5,sticky='E')
 
-OffsetBox = Entry(window,fg='blue',font=('Arial',14))
+OffsetBox = Entry(window,width=20,fg='blue',font=('Arial',14))
 OffsetBox.grid(row=6,column=1,padx=20,pady=5,sticky='E')
 
 #creates the onescreen text for gain and offfset
-GainLabel = Label(window,text="Gain",fg='blue',font=('Arial',14))
+GainLabel = Label(window,width=20,text="Gain",fg='blue',font=('Arial',14))
 GainLabel.grid(row=5, column=0,padx=20,pady=5,sticky='E')
 
-OffsetLabel = Label(window,text="Offset",fg='blue',font=('Arial',14))
+OffsetLabel = Label(window,width=20,text="Offset",fg='blue',font=('Arial',14))
 OffsetLabel.grid(row=6,column=0,padx=20,pady=5,sticky='E')
 
 #creates onescreen text for Mathematical instruction inputs
@@ -123,8 +130,6 @@ V3Textbox.grid(row=2,column=3,sticky='W')
 
 V4Textbox = Entry(window,width= 10,fg='blue',font=('Airal',14) )
 V4Textbox.grid(row=3,column=3,sticky='W')
-
-
 
 
 window.mainloop()
