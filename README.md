@@ -1,8 +1,9 @@
 # Siemens-LOGO-offset-gain-calculator
 Calculator for Siemens LOGO! Soft comfort using Mathematical instruction for ease of use(defining input min. and max. bounds and corresponding output values)
 
-#10.3.2024
-Start of project 
-Goal: write calculation algorithm and frontend window in Python
-  11:00
-working calculation for Gain and Offset, still need to add display values for Mathematical instruction values
+Input Low and Input High are the high and low values of sensors that you put in the "Analog Amplifier" block in Siemens Soft Comfort. The Values V1, V2, V3, V4 are values you input into the "Mathematic Instruction" block. The operators are as follows: x, / and +.
+
+The .exe file is located in /dist
+The file is packaged into an exe using PyInstaller so Windows identifies it as a threat. I have yet to figure out a workaround for this.
+
+
