@@ -3,5 +3,6 @@ Calculator for Siemens LOGO! Soft comfort using Mathematical instruction for eas
 
 #10.3.2024
 Start of project 
-Goal: write calculation algorithm and frontend window in python
-
+Goal: write calculation algorithm and frontend window in Python
+  11:00
+working calculation for Gain and Offset, still need to add display values for Mathematical instruction values
