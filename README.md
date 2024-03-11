@@ -5,5 +5,7 @@ Input Low and Input High are the high and low values of sensors that you put in 
 
 The .exe file is located in /dist
 The file is packaged into an exe using PyInstaller so Windows identifies it as a threat. I have yet to figure out a workaround for this.
+11.03.2024
+added a new .exe using nuitka this time its a lot smaller and shouldn't be flagged as a trojan lmao
 
 
